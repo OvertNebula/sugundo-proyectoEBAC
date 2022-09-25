@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bloque_Piedra : Bloque
+public class Bloque_Tierra : Bloque
 {
     // Start is called before the first frame update
     void Start()
     {
-        resistencia = 5;
+        resistencia = 1;
     }
 
     // Update is called once per frame
@@ -15,7 +15,6 @@ public class Bloque_Piedra : Bloque
     {
         
     }
-
     public override void RebotarBola()
     {
         base.RebotarBola();
