@@ -1365,8 +1365,9 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
-  - component: {fileID: 963194229}
   - component: {fileID: 963194230}
+  - component: {fileID: 963194231}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1448,24 +1449,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c679eb0e24b04a49a27dcd3d82941be, type: 3}
+  m_Script: {fileID: 11500000, guid: 324ae6f38fcef1b438b09969ee07d3f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MiEventoUnity:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 963194229}
-        m_TargetAssemblyTypeName: MuestraEventos, Assembly-CSharp
-        m_MethodName: EventoUnityDisparado
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
+  transformPuntajeMaximo: {fileID: 0}
+  transformPuntaje: {fileID: 0}
+  textoPuntajeMaximo: {fileID: 0}
+  textoPuntaje: {fileID: 0}
+  puntajeMaximoSO: {fileID: 11400000, guid: be682562d2658834d911050165f459a5, type: 2}
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1478,6 +1469,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9c6b2b6a1f0282468bd735383cf33b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &963194231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c679eb0e24b04a49a27dcd3d82941be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MiEventoUnity:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &987189461
 GameObject:
   m_ObjectHideFlags: 0
