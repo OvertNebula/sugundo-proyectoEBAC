@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class puntaje : MonoBehaviour
+public class Puntaje : MonoBehaviour
 {
     public Transform transformPuntajeMaximo;
     public Transform transformPuntaje;
     public TMP_Text textoPuntajeMaximo;
     public TMP_Text textoPuntaje;
-    public puntajeMaximo puntajeMaximoSO;
+    public PuntajeMaximo puntajeMaximoSO;
     
     // Start is called before the first frame update
     void Start()
@@ -22,22 +22,24 @@ public class puntaje : MonoBehaviour
         //{
         //puntajeMaximo = PlayerPrefs.GetInt("puntajeMaximo");
         //}
-        textoPuntajeMaximo.text = $"puntajeMaximo: {puntajeMaximoSO.PuntajeMaximo}";
-        puntajeMaximoSO.Puntaje = 0;
+        puntajeMaximoSO.Cargar();
+        textoPuntajeMaximo.text = $"puntajeMaximo: {puntajeMaximoSO.puntajeMaximo}";
+        puntajeMaximoSO.puntaje = 0;
     }
 
     private void FixedUpdate()
     {
-        puntajeMaximoSO.Puntaje += 50;
+        puntajeMaximoSO.puntaje += 50;
     }
     // Update is called once per frame
     void Update()
     {
-        textoPuntaje.text = $"Puntaje: {puntajeMaximoSO.Puntaje}";
-        if(puntajeMaximoSO.Puntaje > puntajeMaximoSO.PuntajeMaximo)
+        textoPuntaje.text = $"Puntaje: {puntajeMaximoSO.puntaje}";
+        if(puntajeMaximoSO.puntaje > puntajeMaximoSO.puntajeMaximo)
         {
-            puntajeMaximoSO.PuntajeMaximo = puntajeMaximoSO.Puntaje;
-            textoPuntajeMaximo.text = $"PuntajeMaximo: {puntajeMaximoSO.PuntajeMaximo}";
+            puntajeMaximoSO.puntajeMaximo = puntajeMaximoSO.puntaje;
+            textoPuntajeMaximo.text = $"PuntajeMaximo: {puntajeMaximoSO.puntajeMaximo}";
+            puntajeMaximoSO.Guardar();
             //PlayerPrefs.SetInt("puntajeMaximo", puntos);
         }
     }

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "PuntajeMaximo", menuName = "Tools/PuntajeMaximo", order =0)]
-public class puntajeMaximo : ScriptableObject
+public class PuntajeMaximo : PuntajePersistente
 {
-    public int Puntaje = 0;
-    public int PuntajeMaximo = 10000;
+    public int puntaje = 0;
+    public int puntajeMaximo = 10000;
 }
