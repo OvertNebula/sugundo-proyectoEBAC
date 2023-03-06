@@ -2,26 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bloque : MonoBehaviour
+public class Bloque_Piedra : Bloque
 {
-    public int resistencia = 1;
-
     // Start is called before the first frame update
     void Start()
     {
-        
+        resistencia = 5;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (resistencia <=0)
-        {
-            Destroy(this.gameObject);
-        }
+        
     }
-    public virtual void RebotarBola()
+
+    public override void RebotarBola(Collision collision)
     {
-         
+        base.RebotarBola(collision);
     }
 }

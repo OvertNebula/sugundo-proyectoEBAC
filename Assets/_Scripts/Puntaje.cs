@@ -9,7 +9,7 @@ public class Puntaje : MonoBehaviour
     public Transform transformPuntaje;
     public TMP_Text textoPuntajeMaximo;
     public TMP_Text textoPuntaje;
-    public PuntajeMaximo puntajeMaximoSO;
+    public puntajeMaximo puntajeMaximoSO;
     
     // Start is called before the first frame update
     void Start()
@@ -23,7 +23,7 @@ public class Puntaje : MonoBehaviour
         //puntajeMaximo = PlayerPrefs.GetInt("puntajeMaximo");
         //}
         puntajeMaximoSO.Cargar();
-        textoPuntajeMaximo.text = $"puntajeMaximo: {puntajeMaximoSO.puntajeMaximo}";
+        textoPuntajeMaximo.text = $"puntajeMaximo: {puntajeMaximoSO.PuntajeMaximo}";
         puntajeMaximoSO.puntaje = 0;
     }
 
@@ -35,10 +35,10 @@ public class Puntaje : MonoBehaviour
     void Update()
     {
         textoPuntaje.text = $"Puntaje: {puntajeMaximoSO.puntaje}";
-        if(puntajeMaximoSO.puntaje > puntajeMaximoSO.puntajeMaximo)
+        if(puntajeMaximoSO.puntaje > puntajeMaximoSO.PuntajeMaximo)
         {
-            puntajeMaximoSO.puntajeMaximo = puntajeMaximoSO.puntaje;
-            textoPuntajeMaximo.text = $"PuntajeMaximo: {puntajeMaximoSO.puntajeMaximo}";
+            puntajeMaximoSO.PuntajeMaximo = puntajeMaximoSO.puntaje;
+            textoPuntajeMaximo.text = $"PuntajeMaximo: {puntajeMaximoSO.PuntajeMaximo}";
             puntajeMaximoSO.Guardar();
             //PlayerPrefs.SetInt("puntajeMaximo", puntos);
         }
