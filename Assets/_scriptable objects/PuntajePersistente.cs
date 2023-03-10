@@ -4,7 +4,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
-public abstract class PuntajePersistente : MonoBehaviour
+public abstract class PuntajePersistente : ScriptableObject
 {
     public void Guardar(string NombreArchivo = null)
     {
