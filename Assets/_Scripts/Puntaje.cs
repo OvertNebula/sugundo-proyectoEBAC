@@ -16,8 +16,8 @@ public class Puntaje : MonoBehaviour
     {
         //transformPuntaje = GameObject.Find("Puntaje").transform;
         //transformPuntajeMaximo = GameObject.Find("PuntajeMaximo").transform;
-        textoPuntaje = GameObject.Find("Puntage").GetComponent<TMP_Text>();//textoPuntaje = transformPuntaje.GetComponent<TMP_Text>();
-        textoPuntajeMaximo = GameObject.Find("PuntajeMaximo").GetComponent<TMP_Text>();//textoPuntajeMaximo = transformPuntajeMaximo.GetComponent<TMP_Text>();
+        textoPuntaje = GameObject.Find("puntage").GetComponent<TextMeshProUGUI>();//textoPuntaje = transformPuntaje.GetComponent<TMP_Text>();
+        textoPuntajeMaximo = GameObject.Find("puntajeMaximo").GetComponent<TextMeshProUGUI>();//textoPuntajeMaximo = transformPuntajeMaximo.GetComponent<TMP_Text>();
 
         //if (PlayerPrefs.HasKey("PuntajeMaximo"))
         //{
@@ -36,11 +36,11 @@ public class Puntaje : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textoPuntaje.text = $"Puntaje: {puntajeMaximoSO.puntaje}";
+        textoPuntaje.text = $"puntaje: {puntajeMaximoSO.puntaje}";
         if(puntajeMaximoSO.puntaje > puntajeMaximoSO.PuntajeMaximo)
         {
             puntajeMaximoSO.PuntajeMaximo = puntajeMaximoSO.puntaje;
-            textoPuntajeMaximo.text = $"PuntajeMaximo: {puntajeMaximoSO.PuntajeMaximo}";
+            textoPuntajeMaximo.text = $"puntajeMaximo: {puntajeMaximoSO.PuntajeMaximo}";
             puntajeMaximoSO.Guardar();
             //PlayerPrefs.SetInt("puntajeMaximo", puntos);
         }
