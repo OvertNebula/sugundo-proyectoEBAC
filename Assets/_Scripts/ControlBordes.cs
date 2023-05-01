@@ -14,11 +14,15 @@ public class ControlBordes : MonoBehaviour
     public float altoCamara;
     public bool salidaDerecha, salidaIzquierda, salidaArriba, salidaAbajo;
 
+    public ControlBordes Control { get; private set; }
+
+    private bool isGamestarted;
 
     public void Awake()
     {
         altoCamara = Camera.main.orthographicSize;
         anchoCamara = Camera.main.aspect * altoCamara;
+        
     }
     
 
@@ -46,7 +50,7 @@ public class ControlBordes : MonoBehaviour
         if (pos.y < -altoCamara + radio)
         {
             pos.y = -altoCamara + radio;
-            
+            salidaAbajo = true;
         }
 
         estaEnPantalla = !(salidaAbajo || salidaArriba || salidaDerecha || salidaIzquierda);

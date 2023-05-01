@@ -16,6 +16,7 @@ public class Bola : MonoBehaviour
     private void Awake()
     {
         control = GetComponent<ControlBordes>();
+        isGameStarted = false;
     }
     // Start is called before the first frame update
     void Start()
@@ -53,7 +54,7 @@ public class Bola : MonoBehaviour
             direccion.x *= -1;
             direccion = direccion.normalized;
             rigidbody.velocity = velocidadBola * direccion;
-            control.salidaArriba = false;
+            control.salidaDerecha = false;
             control.enabled = false;
             Invoke("HabilitarControl", 0.2f);
         }
@@ -64,7 +65,7 @@ public class Bola : MonoBehaviour
             direccion.x *= -1;
             direccion = direccion.normalized;
             rigidbody.velocity = velocidadBola * direccion;
-            control.salidaArriba = false;
+            control.salidaIzquierda = false;
             control.enabled = false;
             Invoke("HabilitarControl", 0.2f);
         }

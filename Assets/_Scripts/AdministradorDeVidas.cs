@@ -17,6 +17,7 @@ public class AdministradorDeVidas : MonoBehaviour
         {
             vidas.Add(hijo.gameObject);
         }
+        vidas.RemoveAt(0);
     }
 
     public void EliminarVida()
