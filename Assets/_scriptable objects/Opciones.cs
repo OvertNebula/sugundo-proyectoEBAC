@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName ="Opciones", menuName = "Herramientas/Opciones", order = 1)]
+[CreateAssetMenu(fileName = "Opciones", menuName = "Herramientas/Opciones", order = 1)]
 public class Opciones : ScriptableObject
 {
     public float velocidadBola = 30;
@@ -22,7 +22,12 @@ public class Opciones : ScriptableObject
 
     public void CambiarDificultad(int nuevaDificultad)
     {
+        velocidadBola = (float)velocidadBola / nuevaDificultad;
         NivelDificultad = (dificultad)nuevaDificultad;
     }
-    
+
+    public void iniciarjuego()
+    {
+
+    }
 }
