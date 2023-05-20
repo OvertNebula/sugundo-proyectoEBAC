@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,20 +22,22 @@ public class Opciones : ScriptableObject
         velocidadBola = nuevaVelocidad;
     }
 
+    
+
     public void CambiarDificultad(int nuevaDificultad)
     {
-        if (dificultadElegida == dificultad.facil)
-        {
-            //BloqueResistencia = resistencia = +0;
-        }
-        else if (dificultadElegida == dificultad.normal)
-        {
-            //BloqueResistencia = resistencia = +1;
-        }
-        else if (dificultadElegida == dificultad.dificil)
-        {
-            //BloqueResistencia = resistencia = +2;
-        }
+        //if (dificultadElegida == dificultad.facil)
+        //{
+        //    //BloqueResistencia = resistencia = +0;
+        //}
+        //else if (dificultadElegida == dificultad.normal)
+        //{
+        //    //BloqueResistencia = resistencia = +1;               //en script bloque
+        //}
+        //else if (dificultadElegida == dificultad.dificil)
+        //{
+        //    //BloqueResistencia = resistencia = +2;
+        //}
         NivelDificultad = (dificultad)nuevaDificultad;
     }
 

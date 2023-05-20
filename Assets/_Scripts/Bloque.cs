@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 public class Bloque : MonoBehaviour
 {
+    Opciones dificultadACambiar;
     public int resistencia = 1;
     public UnityEvent AumentarPuntage;
 
@@ -17,6 +18,25 @@ public class Bloque : MonoBehaviour
             RebotarBola(collision);
         }
 
+    }
+
+    public void cambiosALaDificultad()
+    {
+        dificultadACambiar = GameObject.FindGameObjectWithTag("Tag3").GetComponent<Opciones>();
+
+        //dificultadACambiar.dificultadElegida(gameObject);
+        //if (dificultadElegida == dificultad.facil)
+        //{
+        //    //BloqueResistencia = resistencia = +0;
+        //}
+        //else if (dificultadElegida == dificultad.normal)
+        //{
+        //    //BloqueResistencia = resistencia = +1;               
+        //}
+        //else if (dificultadElegida == dificultad.dificil)
+        //{
+        //    //BloqueResistencia = resistencia = +2;
+        //}
     }
 
     public virtual void RebotarBola(Collision collision)
