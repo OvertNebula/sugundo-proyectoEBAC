@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Opciones", menuName = "Herramientas/Opciones", order = 1)]
 public class Opciones : ScriptableObject
 {
-    Bloque BloqueResistencia;
+    dificultadSeleccionada BloqueResistencia;
     public float velocidadBola = 30;
     public dificultad NivelDificultad = dificultad.facil;
 
@@ -16,7 +16,12 @@ public class Opciones : ScriptableObject
         normal,
         dificil
     }
+
     public dificultad dificultadElegida;
+    internal dificultad facil;
+    internal dificultad normal;
+    internal dificultad dificil;
+
     public void CambiarVelocidad(float nuevaVelocidad)
     {
         velocidadBola = nuevaVelocidad;
@@ -28,7 +33,7 @@ public class Opciones : ScriptableObject
     {
         //if (dificultadElegida == dificultad.facil)
         //{
-        //    //BloqueResistencia = resistencia = +0;
+        //BloqueResistencia = resistencia = +0;
         //}
         //else if (dificultadElegida == dificultad.normal)
         //{

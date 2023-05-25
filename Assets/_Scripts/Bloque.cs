@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Bloque : MonoBehaviour
+public class dificultadSeleccionada : MonoBehaviour
 {
+    Opciones dificultad;
     Opciones dificultadACambiar;
     public int resistencia = 1;
     public UnityEvent AumentarPuntage;
@@ -20,23 +21,36 @@ public class Bloque : MonoBehaviour
 
     }
 
+    public dificultadSeleccionada()
+    {
+        int recistenciaActualizada = RecistenciaActual();
+    }
+
     public void cambiosALaDificultad()
     {
         dificultadACambiar = GameObject.FindGameObjectWithTag("Tag3").GetComponent<Opciones>();
-
+        
         //dificultadACambiar.dificultadElegida(gameObject);
-        //if (dificultadElegida == dificultad.facil)
-        //{
-        //    //BloqueResistencia = resistencia = +0;
-        //}
-        //else if (dificultadElegida == dificultad.normal)
-        //{
-        //    //BloqueResistencia = resistencia = +1;               
-        //}
-        //else if (dificultadElegida == dificultad.dificil)
-        //{
-        //    //BloqueResistencia = resistencia = +2;
-        //}
+        if (dificultadACambiar.dificultadElegida == dificultad.facil)
+        {
+            resistencia = +0;
+        }
+        else if (dificultadACambiar.dificultadElegida == dificultad.normal)
+        {
+            resistencia = +1;               
+        }
+        else if (dificultadACambiar.dificultadElegida == dificultad.dificil)
+        {
+            resistencia = +2;
+        }
+        
+        
+
+    }
+    public int RecistenciaActual()
+    {
+        int RecisteciaAplicada = resistencia;
+        return RecisteciaAplicada;
     }
 
     public virtual void RebotarBola(Collision collision)
@@ -48,11 +62,7 @@ public class Bloque : MonoBehaviour
 
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
 
     // Update is called once per frame
     void Update()
