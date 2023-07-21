@@ -8,26 +8,26 @@ public class Opciones : ScriptableObject
 {
     dificultadSeleccionada BloqueResistencia;
     public float velocidadBola = 30;
-    public dificultad NivelDificultad = dificultad.facil;
+    public dificultad NivelDificultad = dificultad.facil; 
 
-    public enum dificultad
-    {
-        facil,
-        normal,
-        dificil
-    }
+    //public enum dificultad
+    //{
+    //    facil,
+    //    normal,
+    //    dificil
+    //}
 
-    public dificultad dificultadElegida;
-    internal dificultad facil;
-    internal dificultad normal;
-    internal dificultad dificil;
+    //public dificultad dificultadElegida;
+    //internal dificultad facil;
+    //internal dificultad normal;
+    //internal dificultad dificil;
 
     public void CambiarVelocidad(float nuevaVelocidad)
     {
         velocidadBola = nuevaVelocidad;
     }
 
-    
+
 
     public void CambiarDificultad(int nuevaDificultad)
     {
@@ -49,5 +49,11 @@ public class Opciones : ScriptableObject
     public void iniciarjuego()
     {
 
-    }
+    } 
+}
+public enum dificultad
+{
+    facil,
+    normal,
+    dificil
 }
